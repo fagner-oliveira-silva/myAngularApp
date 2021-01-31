@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl} from '@angular/forms';
+import {TooltipPosition} from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-home',
@@ -12,4 +14,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+}
+export class TooltipAutoHideExample {
+  positionOptions: TooltipPosition[] = ['below', 'above', 'left', 'right'];
+  position = new FormControl(this.positionOptions[0]);
 }
